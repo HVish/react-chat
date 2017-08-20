@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardHeader, CardActions, CardMedia, CardTitle } from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import { Card, CardHeader, CardMedia } from 'material-ui/Card';
 import defaultImage from './user.png';
-import { cyan500, white, black } from 'material-ui/styles/colors';
+import { cyan500, white } from 'material-ui/styles/colors';
 
 class UserDetailsCard extends Component {
 
