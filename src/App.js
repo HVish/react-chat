@@ -1,12 +1,4 @@
 import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-import Nav from './Nav';
-import CardGrid from './CardGrid';
-import 'material-grid/dist/css/material-grid.css';
-
-// Needed for onTouchTap
-injectTapEventPlugin();
 
 const users = [
     {
@@ -92,13 +84,6 @@ const users = [
     }
 ];
 
-const App = () => (
-    <MuiThemeProvider>
-        <div>
-            <Nav />
-            <CardGrid users={users}/>  
-        </div>
-    </MuiThemeProvider>
-);
+const App = () => <h1>Hello World</h1>;
 
 export default App;
