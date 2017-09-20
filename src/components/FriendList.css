@@ -1,0 +1,12 @@
+.friends-title {
+    background-color: #F5F5F5;
+    padding: 20px 16px;
+}
+.ellipsis {
+    overflow: hidden;
+}
+.ellipsis h3, .ellipsis p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre;
+}
