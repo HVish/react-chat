@@ -1,4 +1,4 @@
-import {SEARCH_FOCUS, SEARCH_FOCUS_LOOSE} from '../actions/search';
+import {SEARCH_FOCUS, SEARCH_FOCUS_LOOSE, FILTER_TEXT_CHANGE} from '../actions/search';
 
 const initState = {
     focused: false,
@@ -16,6 +16,11 @@ const search = (state = initState, action) => {
             return {
                 ...state,
                 focused: false
+            };
+        case FILTER_TEXT_CHANGE:
+            return {
+                ...state,
+                filterText: action.payload
             };
         default:
             return state

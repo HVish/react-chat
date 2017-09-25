@@ -15,7 +15,7 @@ class FriendList extends React.Component {
             <List>
                 {this
                     .props
-                    .friends
+                    .filtered
                     .map((friend, index) => {
                         return <ListItem button key={index}>
                             <Avatar><PersonIcon/></Avatar>
@@ -33,6 +33,9 @@ class FriendList extends React.Component {
 
 FriendList.propTypes = {
     friends: PropTypes
+        .arrayOf(PropTypes.shape({name: PropTypes.string.isRequired, lastMsg: PropTypes.string.isRequired}))
+        .isRequired,
+    filtered: PropTypes
         .arrayOf(PropTypes.shape({name: PropTypes.string.isRequired, lastMsg: PropTypes.string.isRequired}))
         .isRequired
 };
