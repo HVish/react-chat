@@ -1,7 +1,6 @@
 // @flow weak
 
 import React from 'react';
-import './FriendList.css';
 import PropTypes from 'prop-types';
 import List, {ListItem, ListItemText} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
@@ -9,18 +8,10 @@ import PersonIcon from 'material-ui-icons/Person';
 import Search from '../containers/SearchContainer.jsx';
 
 class FriendList extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            friends: this.props.friends
-        };
-    }
-
     render() {
         return <div>
             <div className={'friends-title'}>Friends</div>
-            <Search />
+            <Search/>
             <List>
                 {this
                     .props
@@ -41,7 +32,9 @@ class FriendList extends React.Component {
 }
 
 FriendList.propTypes = {
-    friends: PropTypes.array.isRequired
+    friends: PropTypes
+        .arrayOf(PropTypes.shape({name: PropTypes.string.isRequired, lastMsg: PropTypes.string.isRequired}))
+        .isRequired
 };
 
 export default FriendList;
