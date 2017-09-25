@@ -3,22 +3,24 @@
 import React from 'react';
 import './FriendList.css';
 import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
 import List, {ListItem, ListItemText} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import PersonIcon from 'material-ui-icons/Person';
-
-const styles = theme => ({
-    root: {
-        background: theme.palette.background.paper
-    }
-});
+import Search from '../containers/SearchContainer.jsx';
 
 class FriendList extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            friends: this.props.friends
+        };
+    }
+
     render() {
-        const classes = this.props.classes;
-        return <div className={classes.root}>
+        return <div>
             <div className={'friends-title'}>Friends</div>
+            <Search />
             <List>
                 {this
                     .props
@@ -39,8 +41,7 @@ class FriendList extends React.Component {
 }
 
 FriendList.propTypes = {
-    classes: PropTypes.object.isRequired,
     friends: PropTypes.array.isRequired
 };
 
-export default withStyles(styles)(FriendList);
+export default FriendList;
