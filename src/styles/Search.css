@@ -11,6 +11,7 @@
     flex-direction: row;
     background: #FAFAFA;
 }
+
 .search {
     display: -moz-box;
     display: -webkit-flexbox;
@@ -29,9 +30,11 @@
     align-items: center;
     background: #FFF;
 }
+
 .search .search-icon {
     width: 24px;
     padding-right: 8px;
+    cursor: pointer;
 }
 
 .search .search-input {
@@ -55,4 +58,4 @@
     opacity: 0.5;
     color: inherit;
     cursor: text;
-  }
+}

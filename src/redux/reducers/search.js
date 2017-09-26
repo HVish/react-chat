@@ -15,7 +15,7 @@ const search = (state = initState, action) => {
         case SEARCH_FOCUS_LOOSE:
             return {
                 ...state,
-                focused: false
+                focused: !!state.filterText || false
             };
         case FILTER_TEXT_CHANGE:
             return {

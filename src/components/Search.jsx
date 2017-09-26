@@ -6,16 +6,19 @@ import ArrowBackIcon from 'material-ui-icons/ArrowBack';
 import SearchIcon from 'material-ui-icons/Search';
 
 class Search extends React.Component {
+
     render() {
-        const filterApplied = this.props.filterText || this.props.focused;
-        const placeholder = filterApplied
-            ? ''
-            : 'Search friends';
+        let placeholder = '';
+        let Icon = ArrowBackIcon;
+
+        if (!this.props.focused) {
+            placeholder = 'Search friends';
+            Icon = SearchIcon;
+        }
+
         return <div className={'search-wrapper'}>
             <div className={'search'}>
-                {filterApplied
-                    ? <ArrowBackIcon className={'search-icon'}/>
-                    : <SearchIcon className={'search-icon'}/>}
+                <Icon/>
                 <div
                     className={'search-input'}
                     contentEditable={true}
