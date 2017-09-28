@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Dash.css';
-import Chat from './Chat';
+import Chat from '../containers/ChatContainer.jsx';
 import FriendList from '../containers/FriendListContainer.jsx';
 
 class Dash extends React.Component {

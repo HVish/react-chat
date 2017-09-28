@@ -8,6 +8,11 @@ import PersonIcon from 'material-ui-icons/Person';
 import Search from '../containers/SearchContainer.jsx';
 
 class FriendList extends React.Component {
+
+    onClick(friend) {
+        this.props.onClick(friend);
+    }
+
     render() {
         return <div>
             <div className={'friends-title'}>Friends</div>
@@ -17,7 +22,10 @@ class FriendList extends React.Component {
                     .props
                     .filtered
                     .map((friend, index) => {
-                        return <ListItem button key={index}>
+                        return <ListItem
+                            button
+                            key={index}
+                            onClick={this.onClick.bind(this, friend)}>
                             <Avatar><PersonIcon/></Avatar>
                             <ListItemText
                                 className={'ellipsis'}
@@ -32,12 +40,18 @@ class FriendList extends React.Component {
 }
 
 FriendList.propTypes = {
-    friends: PropTypes
-        .arrayOf(PropTypes.shape({name: PropTypes.string.isRequired, lastMsg: PropTypes.string.isRequired}))
-        .isRequired,
-    filtered: PropTypes
-        .arrayOf(PropTypes.shape({name: PropTypes.string.isRequired, lastMsg: PropTypes.string.isRequired}))
-        .isRequired
+    friends: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired, 
+            lastMsg: PropTypes.string.isRequired
+        })
+    ).isRequired,
+    filtered: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired, 
+            lastMsg: PropTypes.string.isRequired
+        })
+    ).isRequired
 };
 
 export default FriendList;
