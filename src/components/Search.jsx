@@ -2,23 +2,20 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import ArrowBackIcon from 'material-ui-icons/ArrowBack';
-import SearchIcon from 'material-ui-icons/Search';
+import FilterIcon from './FilterIcon';
 
 class Search extends React.Component {
 
     render() {
-        let placeholder = '';
-        let Icon = ArrowBackIcon;
-
-        if (!this.props.focused) {
-            placeholder = 'Search friends';
-            Icon = SearchIcon;
+        let placeholder = 'Search friends';
+        const wrapperClass = ['search-wrapper'];
+        if (this.props.focused) {
+            placeholder = '';
+            wrapperClass.push('active');
         }
-
-        return <div className={'search-wrapper'}>
+        return <div className={wrapperClass.join(' ')}>
             <div className={'search'}>
-                <Icon/>
+                <FilterIcon active={this.props.focused}/>
                 <div
                     className={'search-input'}
                     contentEditable={true}

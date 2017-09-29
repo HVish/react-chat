@@ -10,6 +10,12 @@
     -ms-flex-direction: row;
     flex-direction: row;
     background: #FAFAFA;
+    transition: all 0.3s;
+}
+
+.search-wrapper.active {
+    box-shadow: rgba(204, 204, 204, 0.5) 0px 1px 4px !important;
+    background: #FFF;
 }
 
 .search {
@@ -24,16 +30,14 @@
     -ms-flex-direction: row;
     flex-direction: row;
     width: 100%;
-    margin: 12px;
+    margin: 8px 12px;
     padding: 8px;
-    border: 1px solid #F5F5F5;
     align-items: center;
     background: #FFF;
 }
 
 .search .search-icon {
     width: 24px;
-    padding-right: 8px;
     cursor: pointer;
 }
 
