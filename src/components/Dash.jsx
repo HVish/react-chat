@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Dash.css';
+import styles from '../styles/Dash.css';
 import Chat from '../containers/ChatContainer.jsx';
 import FriendList from '../containers/FriendListContainer.jsx';
 
