@@ -1,8 +1,13 @@
 import {connect} from 'react-redux';
 import Search from '../components/Search.jsx';
 import '../styles/Search.css';
-import {searchFocus, searchFocusLoose, filterTextChange} from '../redux/actions/search';
 import {filterChanged} from '../redux/actions/friendList';
+import {
+    searchFocus, 
+    searchFocusLoose, 
+    filterTextChange,
+    backPressed
+} from '../redux/actions/search';
 
 const mapStateToProps = (state, ownProps) => ({
     ...state.search
@@ -13,11 +18,18 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
         dispatch(searchFocus(ownProps));
     },
     onKeyUp: (event) => {
-        dispatch(filterTextChange(event.target.innerText));
-        dispatch(filterChanged(event.target.innerText));
+        dispatch(filterTextChange(event.target.value));
+        dispatch(filterChanged(event.target.value));
     },
     onBlur: () => {
         dispatch(searchFocusLoose(ownProps));
+    },
+    onBackPressed: () => {
+        // reset filter
+        dispatch(filterTextChange(''));
+        dispatch(filterChanged(''));
+        // reset input
+        dispatch(backPressed());
     }
 });
 

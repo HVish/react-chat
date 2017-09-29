@@ -46,7 +46,7 @@ class FilterIcon extends React.Component {
                 }
                 return <div style={{display: 'flex'}}>
                     <SearchIcon style={searchStyle}/>
-                    <ArrowBackIcon style={arrowStyle}/>
+                    <ArrowBackIcon style={arrowStyle} onClick={this.props.onBackPressed}/>
                 </div>;
             }}
         </Motion>;
@@ -54,7 +54,8 @@ class FilterIcon extends React.Component {
 }
 
 FilterIcon.propTypes = {
-    active: PropTypes.bool
+    active: PropTypes.bool,
+    onBackPressed: PropTypes.func.isRequired
 };
 
 export default FilterIcon;
