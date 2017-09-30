@@ -1,29 +1,31 @@
 import {FILTER_CHANGED, FRIEND_SELECTED} from '../actions/friendList';
+const dummyList = [
+    {
+        name: 'Keshav Singh',
+        lastMsg: 'Bhaiya me clg ja ra hu'
+    }, {
+        name: 'Vishnu Singh',
+        lastMsg: 'Bye'
+    }, {
+        name: 'Pawan Singh',
+        lastMsg: 'Tu dekh lena apne hisab se'
+    }, {
+        name: 'Mohar Singh',
+        lastMsg: 'Aa gaye!'
+    }, {
+        name: 'Ratish Udawat',
+        lastMsg: 'Ok'
+    }, {
+        name: 'Preetam Swami',
+        lastMsg: 'Testing...'
+    }, {
+        name: 'Deepak Saini',
+        lastMsg: 'I am at Dashehra Mela'
+    }
+];
 const initState = {
-    friends: [
-        {
-            name: 'Vishnu Singh',
-            lastMsg: 'Bye'
-        }, {
-            name: 'Ratish Udawat',
-            lastMsg: 'Ok'
-        }, {
-            name: 'Preetam',
-            lastMsg: 'Testing...'
-        }
-    ],
-    filtered: [
-        {
-            name: 'Vishnu Singh',
-            lastMsg: 'Bye'
-        }, {
-            name: 'Ratish Udawat',
-            lastMsg: 'Ok'
-        }, {
-            name: 'Preetam',
-            lastMsg: 'Testing...'
-        }
-    ],
+    friends: dummyList,
+    filtered: dummyList,
     friendSelected: null
 };
 

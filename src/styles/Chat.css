@@ -1,8 +1,29 @@
 .chat {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
-.chat-title {
-    flex: 1;
+
+.chat .chat-title {
     background-color: #EEEEEE;
     padding: 20px 16px;
+}
+
+.chat .chat-body {
+    flex: auto;
+    overflow-y: auto;
+}
+
+.chat .chat-input {
+    flex: none;
+    padding: 16px;
+    background: #FFF;
+    outline: none;
+    border: none;
+    border-top: 1px solid #E0E0E0;
+}
+
+.chat .chat-input:disabled {
+    background: #E0E0E0;
+    cursor: not-allowed;
 }

@@ -1,6 +1,7 @@
 import {CHAT_SELECTED} from '../actions/chat';
 const initState = {
-    chatTitle: 'No Chat Selected'
+    chatTitle: 'No Chat Selected',
+    chatSelected: false
 };
 
 const chat = (state = initState, action) => {
@@ -9,7 +10,8 @@ const chat = (state = initState, action) => {
             const friend = action.payload;
             return {
                 ...state,
-                chatTitle: friend.name
+                chatTitle: friend.name,
+                chatSelected: true
             };
         default:
             return state
