@@ -28,6 +28,8 @@
 .search .search-input {
     position: relative;
     width: 100%;
+    min-width: 0;
+    background: #FFF;
     flex: 1;
     display: flex;
     outline: none;
