@@ -1,3 +1,9 @@
+.friends {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .friends-title {
     background-color: #EEEEEE;
     padding: 20px 16px;
@@ -9,4 +15,13 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: pre;
+}
+
+.friends-search {
+    flex: none;
+}
+
+.friends-list {
+    flex: auto;
+    overflow-y: auto;
 }
