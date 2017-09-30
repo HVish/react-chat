@@ -18,22 +18,19 @@ class FriendList extends React.Component {
             <div className={'friends-title'}>Friends</div>
             <Search/>
             <List>
-                {this
-                    .props
-                    .filtered
-                    .map((friend, index) => {
-                        return <ListItem
-                            button
-                            key={index}
-                            onClick={this.onClick.bind(this, friend)}>
-                            <Avatar><PersonIcon/></Avatar>
-                            <ListItemText
-                                className={'ellipsis'}
-                                inset={true}
-                                primary={friend.name}
-                                secondary={friend.lastMsg}/>
-                        </ListItem>
-                    })}
+                {this.props.filtered.map((friend, index) => {
+                    return <ListItem
+                        button
+                        key={index}
+                        onClick={this.onClick.bind(this, friend)}>
+                        <Avatar><PersonIcon/></Avatar>
+                        <ListItemText
+                            className={'ellipsis'}
+                            inset={true}
+                            primary={friend.name}
+                            secondary={friend.lastMsg}/>
+                    </ListItem>
+                })}
             </List>
         </div>;
     }
