@@ -18,6 +18,7 @@
     padding: 8px;
     align-items: center;
     background: #FFF;
+    border-radius: 4px;
 }
 
 .search .search-icon {
