@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import List, {ListItem, ListItemText} from 'material-ui/List';
+import List, { ListItem, ListItemText } from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import PersonIcon from 'material-ui-icons/Person';
 import Search from '../containers/SearchContainer.jsx';
@@ -16,7 +16,7 @@ class FriendList extends React.Component {
     render() {
         return <div className={'friends'}>
             <div className={'friends-title'}>Friends</div>
-            <div className={'friends-search'}><Search/></div>
+            <div className={'friends-search'}><Search /></div>
             <div className={'friends-list'}>
                 <List>
                     {this.props.filtered.map((friend, index) => {
@@ -24,12 +24,12 @@ class FriendList extends React.Component {
                             button
                             key={index}
                             onClick={this.onClick.bind(this, friend)}>
-                            <Avatar><PersonIcon/></Avatar>
+                            <Avatar><PersonIcon /></Avatar>
                             <ListItemText
                                 className={'ellipsis'}
                                 inset={true}
                                 primary={friend.name}
-                                secondary={friend.lastMsg}/>
+                                secondary={friend.lastMsg} />
                         </ListItem>
                     })}
                 </List>
@@ -41,13 +41,13 @@ class FriendList extends React.Component {
 FriendList.propTypes = {
     friends: PropTypes.arrayOf(
         PropTypes.shape({
-            name: PropTypes.string.isRequired, 
+            name: PropTypes.string.isRequired,
             lastMsg: PropTypes.string.isRequired
         })
     ).isRequired,
     filtered: PropTypes.arrayOf(
         PropTypes.shape({
-            name: PropTypes.string.isRequired, 
+            name: PropTypes.string.isRequired,
             lastMsg: PropTypes.string.isRequired
         })
     ).isRequired

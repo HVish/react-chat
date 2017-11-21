@@ -1,6 +1,6 @@
 import {
-    SEARCH_FOCUS, 
-    SEARCH_FOCUS_LOOSE, 
+    SEARCH_FOCUS,
+    SEARCH_FOCUS_LOOSE,
     FILTER_TEXT_CHANGE,
     BACK_PRESSED
 } from '../actions/search';
@@ -27,7 +27,7 @@ const search = (state = initState, action) => {
                 ...state,
                 filterText: action.payload
             };
-        case BACK_PRESSED: 
+        case BACK_PRESSED:
             return {
                 ...state,
                 focused: false,

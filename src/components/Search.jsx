@@ -20,14 +20,14 @@ class Search extends React.Component {
         }
         return <div className={wrapperClass.join(' ')}>
             <div className={'search'}>
-                <FilterIcon active={this.props.focused} onBackPressed={this.onBackPressed.bind(this)}/>
+                <FilterIcon active={this.props.focused} onBackPressed={this.onBackPressed.bind(this)} />
                 <input
                     className={'search-input'}
                     ref={'filter'}
                     onFocus={this.props.onFocus}
                     onKeyUp={this.props.onKeyUp}
                     onBlur={this.props.onBlur}
-                    placeholder={placeholder}/>
+                    placeholder={placeholder} />
             </div>
         </div>;
     }

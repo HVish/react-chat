@@ -1,7 +1,7 @@
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import FriendList from '../components/FriendList.jsx';
-import {friendSeleted} from '../redux/actions/friendList';
-import {chatSeleted} from '../redux/actions/chat';
+import { friendSeleted } from '../redux/actions/friendList';
+import { chatSeleted } from '../redux/actions/chat';
 import '../styles/FriendList.css';
 
 const mapStateToProps = (state, ownProps) => ({

@@ -6,8 +6,8 @@ import FriendList from '../containers/FriendListContainer.jsx';
 class Dash extends React.Component {
     render() {
         return <div className={styles.root}>
-            <div className={styles.friends}><FriendList/></div>
-            <div className={styles.chat}><Chat/></div>
+            <div className={styles.friends}><FriendList /></div>
+            <div className={styles.chat}><Chat /></div>
         </div>;
     }
 }

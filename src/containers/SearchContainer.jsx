@@ -1,10 +1,10 @@
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import Search from '../components/Search.jsx';
 import '../styles/Search.css';
-import {filterChanged} from '../redux/actions/friendList';
+import { filterChanged } from '../redux/actions/friendList';
 import {
-    searchFocus, 
-    searchFocusLoose, 
+    searchFocus,
+    searchFocusLoose,
     filterTextChange,
     backPressed
 } from '../redux/actions/search';

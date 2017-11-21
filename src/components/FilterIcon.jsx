@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Motion, spring} from 'react-motion';
-import {grey, lightBlue} from 'material-ui/colors';
+import { Motion, spring } from 'react-motion';
+import { grey, lightBlue } from 'material-ui/colors';
 import ArrowBackIcon from 'material-ui-icons/ArrowForward';
 import SearchIcon from 'material-ui-icons/Search';
 
@@ -29,14 +29,14 @@ class FilterIcon extends React.Component {
                 const searchStyle = {
                     ...commonStyles,
                     color: grey[500],
-                    opacity: styles.opacity, 
+                    opacity: styles.opacity,
                     transform: `rotateZ(${styles.rotate}deg)`
                 };
                 const arrowStyle = {
                     ...commonStyles,
                     cursor: 'pointer',
                     color: lightBlue['A200'],
-                    opacity: 1-styles.opacity, 
+                    opacity: 1 - styles.opacity,
                     transform: `rotateZ(${styles.rotate}deg)`
                 };
                 if (styles.opacity === 1) {
@@ -44,9 +44,9 @@ class FilterIcon extends React.Component {
                 } else {
                     searchStyle.display = 'none';
                 }
-                return <div style={{display: 'flex'}}>
-                    <SearchIcon style={searchStyle}/>
-                    <ArrowBackIcon style={arrowStyle} onClick={this.props.onBackPressed}/>
+                return <div style={{ display: 'flex' }}>
+                    <SearchIcon style={searchStyle} />
+                    <ArrowBackIcon style={arrowStyle} onClick={this.props.onBackPressed} />
                 </div>;
             }}
         </Motion>;

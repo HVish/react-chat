@@ -10,9 +10,9 @@ class Chat extends React.Component {
             chatSelected: this.props.chatSelected
         };
         return <div className={'chat'}>
-            <ChatTitle title={this.props.chatTitle} {...commonProps}/>
-            <ChatBody {...commonProps}/>
-            <ChatInput {...commonProps}/>
+            <ChatTitle title={this.props.chatTitle} {...commonProps} />
+            <ChatBody {...commonProps} />
+            <ChatInput {...commonProps} />
         </div>;
     }
 }

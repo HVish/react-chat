@@ -1,4 +1,4 @@
-import {CHAT_SELECTED} from '../actions/chat';
+import { CHAT_SELECTED } from '../actions/chat';
 const initState = {
     chatTitle: 'No Chat Selected',
     chatSelected: false

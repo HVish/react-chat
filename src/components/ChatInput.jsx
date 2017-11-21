@@ -8,7 +8,7 @@ class ChatInput extends React.Component {
             placeholder: 'Type a message',
             disabled: !this.props.chatSelected
         };
-        return <div className={'chat-input-wrapper'}><input {...props}/></div>;
+        return <div className={'chat-input-wrapper'}><input {...props} /></div>;
     }
 }
 

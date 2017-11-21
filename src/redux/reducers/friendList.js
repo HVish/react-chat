@@ -1,4 +1,4 @@
-import {FILTER_CHANGED, FRIEND_SELECTED} from '../actions/friendList';
+import { FILTER_CHANGED, FRIEND_SELECTED } from '../actions/friendList';
 const dummyList = [
     {
         name: 'Keshav Singh',
